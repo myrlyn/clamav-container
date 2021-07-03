@@ -5,5 +5,4 @@ EXPOSE 3310/tcp
 ADD entrypoint.sh  /usr/bin/
 ADD updateloop.sh /usr/bin/
 ADD scan.conf /etc/clamd/
-#ENTRYPOINT /bin/bash /usr/bin/entrypoint.sh
 CMD [ "/bin/bash", "/usr/bin/entrypoint.sh" ]
