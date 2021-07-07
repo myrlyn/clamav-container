@@ -8,5 +8,5 @@ When the container starts it
 3. Starts clamd.  
 4. Healthcheck script (for running in things like Fargate) at /usr/bin/healthcheck.sh
 5. updates clamav and virus definitions immediately upon startp
-
+TODO: move all of the rest of the steps in entrypoint.sh into entrypoint.py
 it should be noted that Clamd will not start until the initial virus DB update is done, so there will be some startup delay.
