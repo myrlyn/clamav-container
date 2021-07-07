@@ -1,5 +1,5 @@
 from fedora:34
-RUN /usr/bin/dnf -y install clamd clamav-data clamav-update clamav-unofficial-sigs psmisc nmap-ncat bash python && mkdir /etc/clamd
+RUN /usr/bin/dnf -y install clamd clamav-data clamav-update clamav-unofficial-sigs psmisc nmap-ncat bash python && mkdir /etc/clamd && /usr/bin/dnf -y clean all
 RUN /usr/bin/freshclam
 EXPOSE 3310/tcp
 ADD updateloop.sh /usr/bin/
